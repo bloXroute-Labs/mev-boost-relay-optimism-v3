@@ -67,10 +67,14 @@ var (
 	pathGetPayload        = "/eth/v1/builder/blinded_blocks"
 
 	// Block builder API
-	pathBuilderGetValidators       = "/relay/v1/builder/validators"
-	pathSubmitNewBlock             = "/relay/v1/builder/blocks"
+	pathBuilderGetValidators = "/relay/v1/builder/validators"
+	pathSubmitNewBlock       = "/relay/v1/builder/blocks"
+	// Optimistic V2
 	pathSubmitNewBlockOptimisticV2 = "/relay/v1/builder/blocks_optimistic_v2"
 	pathSubmitHeader               = "/relay/v1/builder/headers"
+	// Optimistic V3
+	pathSubmitNewBlockOptimisticV3 = "/relay/v1/builder/blocks_optimistic_v3"
+	pathSubmitHeaderOptimisticV3   = "/relay/v1/builder/headers_optimistic_v3"
 
 	// Data API
 	pathDataProposerPayloadDelivered = "/relay/v1/data/bidtraces/proposer_payload_delivered"
