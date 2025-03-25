@@ -360,6 +360,8 @@ func (api *RelayAPI) getRouter() http.Handler {
 		r.HandleFunc(pathSubmitNewBlock, api.handleSubmitNewBlock).Methods(http.MethodPost)
 		r.HandleFunc(pathSubmitNewBlockOptimisticV2, api.handleSubmitNewBlockOptimisticV2).Methods(http.MethodPost)
 		r.HandleFunc(pathSubmitHeader, api.handleSubmitNewHeader).Methods(http.MethodPost)
+		r.HandleFunc(pathSubmitHeaderOptimisticV3, api.handleSubmitNewHeaderOptimisticV3).Methods(http.MethodPost)
+		r.HandleFunc(pathSubmitNewBlockOptimisticV3, api.handleSubmitNewBlockOptimisticV3).Methods(http.MethodPost)
 	}
 
 	// Data API
@@ -2898,6 +2900,14 @@ func (api *RelayAPI) handleSubmitNewHeader(w http.ResponseWriter, req *http.Requ
 	}()
 
 	w.WriteHeader(http.StatusOK)
+}
+
+func (api *RelayAPI) handleSubmitNewBlockOptimisticV3(w http.ResponseWriter, req *http.Request) {
+
+}
+
+func (api *RelayAPI) handleSubmitNewHeaderOptimisticV3(w http.ResponseWriter, req *http.Request) {
+
 }
 
 // ---------------
